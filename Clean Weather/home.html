@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link href="styles.css" rel="stylesheet" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,500;1,9..40,200;1,9..40,300&family=Roboto:wght@400;700;900&display=swap"
+      rel="stylesheet"
+    />
+    <script src="weather.js"></script>
+    <title>Document</title>
+  </head>
+  <body class="container">
+    <h1 id="headingText" class="blinking-caret">Weather info that's</h1>
+    <div class="search-bar">
+      <input
+        class="gmorph-input"
+        type="text"
+        id="cityInput"
+        placeholder="Enter the city"
+        onemptied="()=>{document.getElementById('weather-table').classList.remove('unhide')};"
+      />
+      <button class="image-button" onclick="getWeatherInfo()">
+        Search
+        <img src="icons/search-mesh.png" width="35" height="35" >
+      </button>
+    </div>
+    <div class="title-card">
+      <h2 id="city-card" class="headingText">Place</h2>
+    </div>
+    <div class="weather-table" id="weather-table">
+      <div class="weather-card">
+        <img
+          class="weather-icon"
+          src="https://cdn3d.iconscout.com/3d/free/thumb/free-temperature-4115279-3403554@0.png"
+        />
+        <h2 id="temp-card">Temp.</h2>
+      </div>
+      <div class="weather-card">
+        <img class="weather-icon" src="icons/rain2.png" />
+        <h2 id="climate-card">Partly Cloudy</h2>
+      </div>
+      <div class="weather-card">
+        <img
+          class="weather-icon"
+          src="https://static.vecteezy.com/system/resources/previews/024/984/141/original/3d-weather-forecast-icon-raindrops-air-humidity-percentage-3d-illustration-png.png"
+        />
+        <h2 id="humid-card">Humidity</h2>
+      </div>
+      <div class="weather-card">
+        <img class="weather-icon" src="icons/rain2.png" />
+        <h2 id="outfit-card">Best clothes</h2>
+      </div>
+      <div class="weather-card">
+        <img class="weather-icon" src="icons/rain2.png" />
+        <h2>Tips</h2>
+      </div>
+    </div>
+  </body>
+</html>
