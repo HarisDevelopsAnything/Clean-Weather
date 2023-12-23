@@ -7,7 +7,9 @@ h1 {
   box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
   backdrop-filter: blur(20px);
   -webkit-backdrop-filter: blur(20px);
-  padding: 5px;
+  padding-left: 2px;
+  padding-right: 2px;
+  padding-top: 2px;
   border-radius: 10px;
   width: fit-content;
 }
@@ -16,7 +18,8 @@ h2 {
   font-weight: bold;
   font-size: 25pt;
   color: white;
-  padding: 5px;
+  padding-left: 5px;
+  padding-right: 5px;
   border-radius: 10px;
 }
 h3 {
@@ -81,7 +84,7 @@ h3 {
 }
 
 .container {
-  background-image: url("https://images5.alphacoders.com/607/607039.jpg");
+  background-image: url("https://images.unsplash.com/photo-1550859492-d5da9d8e45f3?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D");
   background-repeat: no-repeat;
   background-size: cover;
   display: flex;

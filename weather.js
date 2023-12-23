@@ -8,8 +8,9 @@ const getWeatherInfo = () => {
   const humidCard = document.getElementById("humid-card");
   const weatherCard = document.getElementById("climate-card");
   const outfitCard = document.getElementById("outfit-card");
+  var weatherCondition = document.getElementById("weather-condition");
   const tipsCard = document.getElementById("tips-card");
-  cityCard.innerText = city;
+  cityCard.innerText = "One sec...";
   // Construct the API URL
   const apiUrl = `https://api.weatherapi.com/v1/current.json?key=${apiKey}&q=${city}`;
 
@@ -36,20 +37,27 @@ const getWeatherInfo = () => {
       let recOutfit = "";
       if (parseInt(temperature) <= 0) {
         recOutfit = "Heavy sweaters";
-        outfitCard.innerHTML = recOutfit;
+        weatherCondition.src= "icons/snow-cloud.png";
       } else if (parseInt(temperature) > 0 && parseInt(temperature) <= 18) {
         recOutfit = "Sweaters";
-        outfitCard.innerHTML = recOutfit;
+        weatherCondition.src= "icons/snow-cloud.png";
       } else if (parseInt(temperature) > 18 && parseInt(temperature) <= 30) {
         recOutfit = "Normal clothes";
-        outfitCard.innerHTML = recOutfit;
+        weatherCondition.src= "icons/sun-cloud.png";
       } else if (parseInt(temperature) > 30 && parseInt(temperature) <= 35) {
         recOutfit = "Light clothes";
-        outfitCard.innerHTML = recOutfit;
-      } else {
+        weatherCondition.src= "icons/sun-cloud.png";
+      } 
+       else {
         recOutfit = "Minimal clothing";
-        outfitCard.innerHTML = recOutfit;
+        weatherCondition.src= "icons/sun.png";
       }
+      if(parseInt(humidity) > 80) {
+        recOutfit= "Raincoat with\nlight clothing."
+        weatherCondition.src= (humidity>90)?"icons/thunderstorm-rain.png":"icons/rain3.png";
+      }
+      
+      outfitCard.innerHTML = recOutfit;
       const dataTable = document.getElementById("weather-table");
       dataTable.classList.add("unhide");
       // Display the weather information
