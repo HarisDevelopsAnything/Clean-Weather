@@ -1,4 +1,5 @@
 const getWeatherInfo = () => {
+  try{
   // Replace 'YOUR_API_KEY' with your actual API key from weatherapi.com
   const apiKey = "854b369436fc4ea5a1a131144232407";
   const city = document.getElementById("cityInput").value; // Replace with the desired city
@@ -70,7 +71,10 @@ const getWeatherInfo = () => {
     .catch((error) => {
       console.error("There was a problem fetching weather data:", error);
     });
-};
+}
+catch(Error){
+    alert("Enter a valid city!");
+}
 window.onload = () => weatherHeading();
     
   async function weatherHeading() {
