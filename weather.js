@@ -1,7 +1,8 @@
 const getWeatherInfo = () => {
   // Replace 'YOUR_API_KEY' with your actual API key from weatherapi.com
   const apiKey = "854b369436fc4ea5a1a131144232407";
-  const city = document.getElementById("cityInput").value; // Replace with the desired city
+  const cityInput = document.getElementById("cityInput");
+  const city = cityInput.value; // Replace with the desired city
   //Cards to update
   const cityCard = document.getElementById("city-card");
   const tempCard = document.getElementById("temp-card");
@@ -72,7 +73,7 @@ const getWeatherInfo = () => {
     });
 };
 window.onload = () => weatherHeading();
-    
+
   async function weatherHeading() {
     defaultLength = document.getElementById("headingText").innerHTML.length;
     const phrases = [
@@ -112,4 +113,5 @@ window.onload = () => weatherHeading();
       await new Promise((resolve) => setTimeout(resolve, 50));
     }
   }
+
 
