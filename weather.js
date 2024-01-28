@@ -118,4 +118,4 @@ window.onload = () => weatherHeading();
     }
   }
 
-
+}
