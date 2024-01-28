@@ -76,6 +76,7 @@ const getWeatherInfo = () => {
 catch(Error){
     alert("Enter a valid city!");
 }
+}
 window.onload = () => weatherHeading();
 
   async function weatherHeading() {
@@ -118,4 +119,4 @@ window.onload = () => weatherHeading();
     }
   }
 
-}
+
