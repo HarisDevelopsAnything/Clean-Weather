@@ -177,3 +177,20 @@ h3 {
   justify-content: center;
   margin: 5px;
 }
+ @media screen and (max-width: 768px) {
+  .weather-table {
+    flex-direction: column;
+  }
+  .weather-card {
+    width: 100%;
+  }
+  .title-card {
+    width: 100%;
+  }
+  .search-bar {
+    width: 100%;
+  }
+  .gmorph-input {
+    width: 100%;
+  }
+ }
