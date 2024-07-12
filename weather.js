@@ -1,7 +1,7 @@
 const getWeatherInfo = () => {
   try{
   // Replace 'YOUR_API_KEY' with your actual API key from weatherapi.com
-  const apiKey = "854b369436fc4ea5a1a131144232407";
+  const apiKey = "default";
   const cityInput = document.getElementById("cityInput");
   const city = cityInput.value; // Replace with the desired city
   //Cards to update
